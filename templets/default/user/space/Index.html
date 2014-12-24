@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$UserName_User}的个人空间</title>
+<meta content="act" name="keywords">
+<meta content="act" name="description">
+<link href="space.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="head">
+  <div id="logo"><h1> </h1></div>
+</div>
+<div id="membermenu">
+ <a href="../user/index.asp">会员中心</a>
+<!--ActClass-->
+ <a href="?{$C}-{$UserID_User}">{$ClassName}</a>
+ <!--ActClass-->
+ <a href="../user/send.asp">发短消息</a>
+</div>
+<div id="main">
+  <div id="left">
+    <div id="space">
+      <h5>{$UserName_User} 的个人资料</h5>
+      <img src="{$myface_User}" alt="{$UserName_User}" height="150" width="150"/>
+      <div id="memberinfo">
+      <p>
+  用户名：<a href="?{$C}-{$UserID_User}">{$UserName_User}</a><br />
+  最后登录：{$LoginTime_User}</p>
+    </div>
+      <ol>
+	  <li class="msg"> <a href="../user/inbox.asp" class="msg">查看短消息</a></li>
+	  <li class="edit"><a href="../user/send.asp" class="edit">写短消息</a></li>
+	  </ol>
+      <div class="clear"></div>
+    </div>
+    <ol>
+      <li class="local"><a href="{$InstallDir}">返回网站首页</a></li>
+          </ol>
+  </div>
+  <div id="right">
+<p id="position"> <strong>当前位置：</strong><a href="{$InstallDir}">首页</a>{$UserName_User} 的个人空间</p>
+     <div class="modellist_2">
+      <h3>个人资料</h3>
+      <div class="modellist_2_1 bdr_2" style="width:100%;">
+        <ul >
+
+          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="12%" height="25">用户名</td>
+      <td width="88%" height="25">{$UserName_User}</td>
+    </tr>
+    <tr>
+      <td height="25">会员等级</td>
+      <td height="25">{$G_User}</td>
+    </tr>
+    <tr>
+      <td height="25">注册时间</td>
+      <td height="25">{$RegDate_User}</td>
+    </tr>
+    <tr>
+      <td height="25">联系邮箱</td>
+      <td height="25">{$Email_User}<br /></td>
+    </tr>
+    <tr>
+      <td height="25">姓名</td>
+      <td height="25">{$RealName_User}</td>
+    </tr>
+    <tr>
+      <td height="25">联系电话</td>
+      <td height="25">{$HomeTel_User}</td>
+    </tr>
+    <tr>
+      <td height="25">手机</td>
+      <td height="25">{$Mobile_User}</td>
+    </tr>
+    <tr>
+      <td height="25">OQ</td>
+      <td height="25">{$QQ_User}<br /></td>
+    </tr>
+    <tr>
+      <td height="25">MSN</td>
+      <td height="25">{$MSN_User}<br /></td>
+    </tr>
+    <tr>
+      <td height="25">联系地址</td>
+      <td height="25">{$address_User}</td>
+    </tr>
+    <tr>
+      <td height="25">邮编</td>
+      <td height="25">{$postcode_User}</td>
+    </tr>
+    <tr>
+      <td height="25">&nbsp;</td>
+      <td height="25">&nbsp;</td>
+    </tr>
+  </table>
+        </ul>
+      </div>
+   
+    </div>
+  </div>
+  </div>
+</div>
+<div class="clear"></div>
+<span id="toggle_pannel"></span>
+<div id="foot">
+              关于我们     - 
+  <a href="mailto:{$AdminMail}">电子邮件联系[推荐]</a> - 
+              广告服务     - 
+  <a href="/plus/link/">友情链接</a> - 
+  <a href="/data/sitemap.html">网站地图</a> - 
+             版权声明
+	 <br />
+Powered by <a href="http://www.actcms.com" title="ACTCMS" target="_blank"><strong>ACT<span>CMS</span></strong></a>
+</div>
+</body>
+</html> 

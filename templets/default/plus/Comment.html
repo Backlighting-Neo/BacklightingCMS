@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户评论：{$ArticleTitle}</title>
+ <link href="{$InstallDir}images/actcms.css" rel="stylesheet" type="text/css" />
+ <SCRIPT src="{$InstallDir}act_inc/Act.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="{$InstallDir}act_inc/js/lhgajax.js" type="text/javascript"></SCRIPT>
+<body class="commentpage">
+    <div class="top w960">
+		 <div class="toplogo">
+			<h1><a href="{$InstallDir}"><img src="{$SiteUrl}images/logo.gif"/></a> </h1>
+		</div>
+       
+		<div class="welcome">
+        欢迎 {$UserName} | 
+                <a href="{$InstallDir}user/">会员中心</a> |
+                <a href="{$InstallDir}user/edit.asp">我的资料</a> |
+                 <a href="{$InstallDir}user/Checklogin.asp?Action=LoginOut">退出登录</a>
+        </div>
+       
+    </div>
+
+<div class="w960 tbox">
+	<div class="sp-title">
+		<h2>网友对({$ArticleTitle})的评论列表</h2>
+	</div>
+		<dl>
+			<dt><strong>评论列表（网友评论仅供网友表达个人看法，并不表明本站同意其观点或证实其描述）</strong></dt>
+<!--ActPlus-->
+    <dd>
+       <div class="decmt-title">
+            <span class="username">匿名</span>
+            <span class="date"> 于 {$AddDate}说到</span>
+			<span id='goodfb{$ID}' class="up"><a href="#" onclick="postBadGood('{$InstallDir}','1',{$ID})">支持</a>[{$Y}]</span>
+			<span id='badfb{$ID}' class="up"><a href="#" onclick="postBadGood('{$InstallDir}','2',{$ID})">反对</a>[{$N}]</span>
+       </div>
+
+        <div class="decmt-content">{$Content}</div>   
+	</dd>
+<!--ActPlus-->
+</dl>
+</div>
+
+<div class="w960 pages">{$page}</div> 	
+
+<div class="pinglun w960">
+	<div class="pinglunbox">
+		<div class="pinglun_bt"><span><a href="{$InstallDir}plus/Comment/index.asp?ModeID={$ModeID}&ClassID={$ClassID}&ID={$ID}">已有 <font color="#FF0000">{$CommentCount}</font> 人参与</a></span><b>所有评论</b></div>
+		<div class="act_fbpl_nr">请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</div>
+		<div class="act_fbpl fbpls">
+			<form action="ACT.Comment.asp?Action=WriteSave&ModeID={$ModeID}&ClassID={$ClassID}&ID={$ID}" method="post" name="Comment">
+				<textarea name="Content" rows="5" class="act_fbpl_k"></textarea>
+				<div class="act_fbpl_info">{$Login}{$Code}
+				<input type='checkbox' name='AnounName'  id='AnounNames'/><label for='AnounNames'> 匿名</label>
+				<input  type='button' class='dcmp-submit' onclick=CheckForm() name=Submit value='提交发表'/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="h10"></div>
+<div class="footer w960">
+	<p class="link">
+        关于我们 - <a href="mailto:{$AdminMail}">电子邮件联系[推荐]</a> - 
+        广告服务 - <a href="{$InstallDir}plus/link/">友情链接</a> - 版权声明
+	</p>
+	 
+	<p class="powered">
+		Powered by <a href="http://www.actcms.com" title="ACTCMS" target="_blank"><strong>ACT<span>CMS</span></strong></a> &copy; 2004-2008  
+	</p> 
+</div>
+</body>
+</html>

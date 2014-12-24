@@ -1,0 +1,28 @@
+/* 心情排行 */
+.act_xq{border:1px solid #cdddf0; background:#f3f7fc;width:670px; margin-left:auto; margin-right:auto;font-size:12px; margin-top:10px;}
+.act_xq_bt{width:640px; margin-left:auto; margin-right:auto; margin-top:10px;}
+.act_xq_bt span{float:right;}
+.act_xq_list{margin-left:auto; margin-right:auto;width:650px; margin-top:10px; margin-bottom:10px;}
+.act_xq_list li{float:left;width:65px; text-align:center;line-height:24px;}
+
+.act_sc{width:680px; margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:10px; text-align:right;font-size:12px;}
+.act_sc span{ margin-right:10px;}
+.dingcai{float:left;width:300px;line-height:37px;}
+.dingcai span{ margin-right:25px;}
+.ding{background:url(ding.gif) no-repeat;width:136px;height:36px;float:left; margin-left:10px;display:inline;}
+.ding a {display: block;color:#ff0000; text-decoration:none;}
+.ding a:hover {color:#ff0000; text-decoration:none;}
+.cai{background:url(cai.gif) no-repeat;width:136px;height:36px;float:left; margin-left:10px; display:inline;}
+.cai a {display: block;color:#0056c6; text-decoration:none;}
+.cai a:hover {color:#0056c6; text-decoration:none;}
+.act_shoucang{float:right;width:340px; text-align:right;height:18px; line-height:18px; margin-top:10px;}
+.act_shoucang img{padding-top:15px;}
+.xqtit{overflow:hidden; margin-bottom:8px;}
+.xqtit h3{ display:inline-block; width:50%; float:left; margin:0px; padding:0px; font-size:13px;
+font-weight:100;}
+.xqmore{ width:30%; float:right; display:inline-block; text-align:right;}
+/*心情条状显示*/
+.xqzt{margin-bottom:10px; display:block; overflow:hidden;}
+.xqzt em{font-style: normal; font-family:Arial, Helvetica, sans-serif;}
+.mood_bar {position:relative; width:24px; height:100px;background:#EEF7F7; margin:0 auto;}
+.mood_bar_in {background:url(moodrank.gif) repeat-y -2px 0;bottom:0;left:0;position:absolute;width:24px;}

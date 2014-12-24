@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{$InstallDir}images/actcms.css" rel="stylesheet" type="text/css" />
+<title>{$SiteName}-{$SiteTitle}</title>
+<meta name="keywords" content="{$Keywords}">
+<meta name="description" content="{$Description}">
+</head>
+
+<body>
+ <!--网页头部-->
+<div class="header">
+	<!--顶部-->
+	<div class="top">
+		<!--通知-->
+		<div class="tongzhi">{ACT_网站公告}</div>
+		<!--用户-->
+		<div class="yonghu">
+			<!--
+			用户登陆、注册入口
+			<span><a href="{$InstallDir}User/Reg.asp">用户注册</a></span>
+			<span><a href="{$InstallDir}User/" >会员登陆</a></span>
+			 -->
+			<span><a href="javascript:;" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteUrl}');">设为首页</a></span>
+			<span><A  onclick="javascript:window.external.AddFavorite(location.href,document.title)" href="#">收藏本站</A></span>
+			<span><A href="{$Path}plus/rss.asp" target="_blank">Rss订阅</A></span>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="top_2">
+		<!--logo-->
+		<div class="logo"><a href="{$InstallDir}" ><img src="{$InstallDir}images/logo.gif" alt="{$SiteName}" width="220" height="90" /></a></div>
+		<!--banner-->
+		<div class="banner"><img src="{$InstallDir}images/banner.gif" width="728" height="90" /></a></div>
+		<div class="clear"></div>
+	</div>
+	<!--导航菜单-->
+	<div class="menu">
+		<div class="menu_l"></div>
+		<ul id="menu">
+			<li><a href="{$InstallDir}" title="{$SiteName}">网站首页</a></li>
+			{ACTCMS_网站总导航} 
+ 		</ul>
+		<div class="menu_r"></div>
+		<div class="clear"></div>
+	</div>
+	<!--二级导航-->
+	 
+	<!--关键字搜索-->
+	<div class="tags">
+		<!--tags-->
+		<div class="tag">
+			<b>Tags:</b>
+ 			{=GetTags(10,1)}
+		</div>
+		<!--search-->
+		<div class="search">
+			   <form action="{$InstallDir}plus/search/" name="formsearch">
+             <input type="hidden" name="ModeID" value="1" />
+			<div class="search_kk"><img src="{$InstallDir}images/search_bt.gif" /> 
+			<input name="keyword" type="text" class="search_k" /></div>
+			<div class="search_s"><input name="" type="image" src="{$InstallDir}images/search.gif" /></div>
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--主要部分-->
+<div class="main">
+	<!--首页左边区块-->
+	<div class="act_ml">
+		<!--幻灯片-->
+		<div class="hdp">
+	 
+ 			<script type="text/javascript">
+var swf_width=310;
+var swf_height=280;
+var config='5|0xffffff|0x666666|80|0xffffff|0x666666|0x000000';
+//-- config 参数设置 -- 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字颜色|当前按键颜色|普通按键色彩 --
+var files='',links='', texts='';
+{ACTCMS_通用幻灯片}  
+files=files.substring(1);links=links.substring(1);texts=texts.substring(1);
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="{$InstallDir}ACT_inc/SlIDe.swf" />');
+document.write('<param name="quality" value="high" />');
+document.write('<param name="menu" value="false" />');
+document.write('<param name=wmode value="opaque" />');
+document.write('<param name="FlashVars" value="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'" />');
+document.write('<embed src="{$InstallDir}ACT_inc/SlIDe.swf" wmode="opaque" FlashVars="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+		</div>
+		<!--首页头条-->
+		<div class="toutiao">
+			{ACTCMS_网站首页头条} 
+			<ul>
+				{ACTCMS_网站首页最新文章} 
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<!--新闻图片-->
+		<div class="act_newpic">
+			<!--标题-->
+			<div class="act_newpic_bt"><span>新闻图片</span></div>
+			<div class="act_newpic_list">
+				<ul>
+			{ACTCMS_首页图片文章} 
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--首页右边区块-->
+	<div class="act_mr">
+		<!--用户登录-->
+		
+		<div class="login">
+			<!--标题-->
+			<div class="login_bt"><span>用户登录</span></div>
+			<div class="login_nr">
+ 			{$JSUserlogin}		
+		</div>
+			</div>
+		<!--热门排行-->
+		<div class="hot">
+			<!--标题-->
+			<div class="hot_bt"><span>热门排行</span></div>
+				<ul class="hot_nr">
+					{ACTCMS_热门排行} 
+				</ul>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+</div>
+<!--首页第二部分-->
+<div class="main">
+	<!--首页调用区块列表-->
+	<div class="act_ml2">
+		<!--栏目循环列表-->
+ {ACTCMS_循环栏目} 
+ <!--栏目循环列表-->
+
+ 		<div class="clear"></div>
+	</div>
+	<!--最新文章-->
+	<div class="act_mr2">
+		<!--标题-->
+		<div class="new_bt"><span>最新文章</span></div>
+		<!--内容-->
+		<div class="new_nr">
+			<!--最新文章列表-->
+			{ACTCMS_右侧最新文章} 
+		</div>
+ 	</div>
+	<div class="clear"></div>
+</div>
+<!--友情链接-->
+<div class="act_link">
+	<!--友情链接 标题-->
+	<div class="act_link_bt"><span><a href="plus/link/" target="_blank">更多>></a></span>
+	<b>友情链接</b><a href="plus/link/LinkReg.asp" target="_blank"><font color="#ff0000">申请链接</font></a>
+	</div>
+	<!--友情链接 内容-->
+	<div class="act_link_nr">
+		{ACTCMS_友情链接} 
+	</div>
+</div>
+<!--网页底部-->
+<div class="footer">
+{ACT_网页底部版权信息}   {$Beian} {$Statcode}
+</div>
+</body>
+</html>

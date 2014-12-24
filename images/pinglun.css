@@ -1,0 +1,40 @@
+/* 评论 */
+.pinglun{width:698px;border:1px solid #cdddf0;margin-top:8px;}
+.pinglun_bt{background:url(bt_bg.gif) repeat-x;height:26px;line-height:27px;width:auto;border-bottom:1px solid #cdddf0;}
+.pinglun_bt b{font-size:14px;color:#548cc9; margin-left:10px;}
+.pinglun_bt span{float:right;font-size:12px; margin-right:10px;}
+.pinglun_nr{width:670px; margin-left:auto; margin-right:auto;}
+.pinglun_nr_info{font-size:12px;color:#0066cc; margin-top:10px;}
+.pinglun_nr_info span{float:right;color:#999999;}
+.pinglun_nr_info var{font-style: normal;color:#A7A7A7}
+.pinglun_nr_content{line-height:20px; margin-top:5px;border-bottom:1px dashed #cccccc;padding-bottom:5px;}
+
+.act_fbpl{width:670px; margin-left:auto; margin-right:auto; margin-top:10px;}
+.act_fbpl_k{width:660px;height:100px;}
+.act_fbpl_info{ margin-top:5px;line-height:24px; margin-bottom:10px;}
+.act_fbpl_info span{float:right;}
+.act_fbpl_kk{width:100px;border:1px solid #74c5f0;height:17px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

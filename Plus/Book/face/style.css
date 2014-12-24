@@ -1,0 +1,77 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #f8f8f8;
+	SCROLLBAR-HIGHLIGHT-COLOR: #486c90;
+	SCROLLBAR-SHADOW-COLOR: #240048;
+	SCROLLBAR-3DLIGHT-COLOR: #fcfcfc;
+	SCROLLBAR-ARROW-COLOR: #482424;
+	SCROLLBAR-TRACK-COLOR: #ffffff;
+	SCROLLBAR-DARKSHADOW-COLOR: #fcfcfc;
+	SCROLLBAR-BASE-COLOR: #b4fcfc;
+	BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: center;
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #666666;
+}
+BODY {
+	FONT-SIZE: 9pt
+}
+TABLE {
+	FONT-SIZE: 9pt
+}
+TD {
+	FONT-SIZE: 9pt
+}
+TD {
+	FONT-SIZE: 9pt
+}
+INPUT {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #cccccc; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #cccccc; PADDING-BOTTOM: 1px; BORDER-TOP-COLOR: #cccccc; PADDING-TOP: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #cccccc
+}
+.input2 {
+	background-color:#EAEAEA;
+	border-top:2px solid #FEFEFE;
+	border-right:1px solid #BCBCBCborder-bottom:1px solid #BCBCBC;	border-left:2px solid #FEFEFE;
+	height:29px;
+	cursor:hand;
+	font-size: 14px;
+}
+A:link {
+	COLOR: #01466f; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #004F99; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: white; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #f96400; TEXT-DECORATION: underline
+}
+.tword {
+	TABLE-LAYOUT: fixed; WORD-BREAK: break-all
+}
+.bg1 {
+	border-top: none #FFFFFF;
+	border-right: none #FFFFFF;
+	border-bottom: none #FFFFFF;
+	border-left: dotted #FFFFFF;
+
+}
+.gbinput {
+	BORDER-RIGHT: #79a7e2 1px solid; BORDER-TOP: #79a7e2 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #79a7e2 1px solid; BORDER-BOTTOM: #79a7e2 1px solid
+}
+.button {
+	BORDER-RIGHT: #698cc3 1px solid; BORDER-TOP: #698cc3 1px solid; BACKGROUND: #ffffff; FONT: 12px/150% Arial, Helvetica, sans-serif; BORDER-LEFT: #698cc3 1px solid; COLOR: #003366; BORDER-BOTTOM: #698cc3 1px solid
+}
+
+
+A.t999:link,A.t999:visited,A.t999:active {
+COLOR: #336699; TEXT-DECORATION: underline
+}
+A.t999:hover {
+	BACKGROUND: #336699; COLOR: #ffffff; TEXT-DECORATION: none
+}
+
+
+}

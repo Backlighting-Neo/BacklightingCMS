@@ -1,0 +1,60 @@
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px; COLOR: #2d465f; FONT-FAMILY: Verdana
+}
+TD {
+	FONT-SIZE: 12px; MARGIN: 0px; COLOR: #2d465f; FONT-FAMILY: Verdana
+}
+FORM {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+INPUT {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+selected {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+TEXTAREA {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+SELECT {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana
+}
+.unhtml {
+	COLOR: #85a4c5
+}
+DIV {
+	FONT-SIZE: 12px
+}
+
+a{text-decoration: none;} /* 链接无下划线,有为underline */ 
+a:link {color: #1E5494;} /* 未访问的链接 */
+a:visited {color: #1E5494;} /* 已访问的链接 */
+a:hover{color: #1E5494;} /* 鼠标在链接上 */ 
+a:active {color: #1E5494;} /* 点击激活链接 */
+.ACT_F {
+	FONT-SIZE: 12px; COLOR: #999999; TEXT-DECORATION: none
+}
+A.ACT_F:link {
+	FONT-SIZE: 12px; COLOR: #3f6293; TEXT-DECORATION: none
+}
+A.ACT_F:visited {
+	FONT-SIZE: 12px; COLOR: #3f6293; TEXT-DECORATION: none
+}
+A.ACT_F:hover {
+	FONT-SIZE: 12px; COLOR: #3f6293; TEXT-DECORATION: underline
+}
+
+.button_down {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND-IMAGE: url(button_bg_2.jpg); COLOR: #4b6888; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+
+.indexq {
+	BACKGROUND-IMAGE: url(logo_bg.jpg)
+}
+.button {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND-IMAGE: url(button_bg.jpg); COLOR: #ffffff; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+
+.ACT_menu {
+	BORDER-RIGHT: #999999 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #4b6888; TEXT-DECORATION: none
+}

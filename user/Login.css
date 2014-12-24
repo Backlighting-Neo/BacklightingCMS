@@ -1,0 +1,59 @@
+/* ============全局============ */
+html {height:100%;}
+div,ul,ol,form {margin:0;padding:0;}
+img {border:0;}
+li {list-style:none;}
+table {font-size:12px;}
+input {font-family:tahoma,Arial,Helvetica,sans-serif;font-size:12px;vertical-align:middle;}
+h1,h2,h3,h4,h5,h6,h7 {margin:0;padding:0;text-align:left;font-size:12px;font-weight:400;}
+p {margin:0;}
+
+body {
+margin:0;
+height:100%;
+background:#fff;
+font-size: 12px;
+font-family:tahoma,Arial,Century Gothic,verdana,Helvetica,sans-serif;
+color: #222;
+line-height:150%;
+text-align:center;
+word-break:break-all;
+}
+a:link{text-decoration:none;color:#277DBB;}
+a:visited {text-decoration:none;color:#277DBB;}
+a:hover {text-decoration:underline;color:#469AD9;}
+a:active {text-decoration:none;color:#277DBB;}
+/* ============常用============ */
+.left {float:left;}
+.right {float:right;}
+.clear {clear:both;}
+.none {display:none;}
+.input_onFocus { background: #FFC!important; }
+.input_onBlur { background: #FFf!important; }
+/* ============布局============ */
+#Header {clear:both;width:760px;margin:20px auto 0 auto;}
+#Header #logo {float:left;width:150px;height:30px;background:url("images/logo.jpg") no-repeat left top;text-indent:-9999px;}
+#Header #menu {float:right;color:#277DBB;padding:10px 20px 0 0;}
+
+#Container {clear:both;width:760px;margin:auto;background:url("images/ContainerBg.jpg") no-repeat left 20px;}
+#Container .Sidebar {float:right;position:relative;background:#fff;top:0;right:20px;width:250px;text-align:left;}
+#Container .Sidebar form {border:1px #ADADAD solid;padding:50px 20px 0 20px;background:url("images/UserLogin.jpg") no-repeat 15px 15px;}
+#Container .Sidebar form ul {}
+#Container .Sidebar form ul li {margin:0 0 10px 0;color:#999;}
+#Container .Sidebar form ul li.CookieDate {margin:0 0 10px 44px;}
+#Container .Sidebar form ul li.hr {border-bottom:1px #ADADAD solid;}
+#Container .Sidebar form ul li.regbt {text-align:center;}
+#Container .Sidebar form ul li.regbt a {margin:0;}
+#Container .Sidebar form ul li #UserName,#Container .Sidebar form ul li #Password,#Container .Sidebar form ul li #codestr {border:1px #aeaeae solid;background:#f4f4f4;}
+#Container .Sidebar form ul li #codestr {width:52px;height:18px;margin:-1px 0 0 0;font-size:14px;font-weight:600;font-family:Century Gothic,verdana,tahoma,Arial,Helvetica,sans-serif;}
+#Container .Sidebar form ul li input#Submit {margin:0 0 0 46px;height:25px;}
+#Container .Sidebar form ul li a {color:#f00;margin:0 0 0 14px;}
+#Container .Sidebar ul.help {margin:20px 0 0 0;padding:10px 20px 20px 20px;border:1px #ADADAD solid;}
+#Container .Sidebar ul.help li {list-style:disc inside none;}
+#Container .MainBody {float:left;margin:170px 0 0 0;width:470px;text-align:left;}
+#Container .MainBody .ad {margin:4px 0 0 6px;color:#fff;}
+#Container .MainBody dl {margin:20px 0 0 30px;}
+#Container .MainBody dl dt {color:#333;font-size:14px;font-weight:600;}
+#Container .MainBody dl dd {margin:5px 0 20px 30px;color:#999;}
+
+#Footer {clear:both;width:700px;height:20px;margin:20px auto auto auto;padding:15px 0 0 0;border-top:1px #ADADAD solid;}

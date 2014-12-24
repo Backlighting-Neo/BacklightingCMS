@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$CTitle}_{$SiteName}</title>
+<meta name="keywords" content="{$ArticleIntro}" />
+<meta name="description" content="{$CTitle}{$ArticleIntro}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{$InstallDir}images/actcms.css" rel="stylesheet" type="text/css" />
+<link href="{$InstallDir}images/Plus/xinqing.css" rel="stylesheet" type="text/css" />
+<SCRIPT src="{$InstallDir}act_inc/Act.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="{$InstallDir}act_inc/js/lhgajax.js" type="text/javascript"></SCRIPT>
+</head>
+
+<body>
+ <!--网页头部-->
+ <!--#include file="header.html"-->
+ 	<!--顶部 第二部分-->
+	<div class="top_2">
+		<!--logo-->
+		<div class="logo"><a href="{$InstallDir}" ><img src="{$InstallDir}images/logo.gif" alt="{$SiteName}" width="220" height="90" /></a></div>
+		<!--banner-->
+		<div class="banner"><a href="http://www.actcms.com" title="合肥网络公司"><img src="{$InstallDir}images/banner.gif" alt="合肥网络公司" width="728" height="90" /></a></div>
+		<div class="clear"></div>
+	</div>
+	<!--导航菜单-->
+	<div class="menu">
+		<div class="menu_l"></div>
+		<ul id="menu">
+			<li><a href="{$InstallDir}">网站首页</a></li>
+			{ACTCMS_网站总导航} 
+		</ul>
+		<div class="menu_r"></div>
+		<div class="clear"></div>
+	</div>
+	<!--二级导航-->
+	<div class="nav">
+		{ACTCMS_通用导航} 
+	</div>
+	<!--关键字搜索-->
+	<div class="tags">
+		<!--tags-->
+		<div class="tag">
+			<b>Tags:</b>
+ 			{=GetTags(10,3)}
+		</div>
+		<!--search-->
+		<div class="search">
+		      <form action="{$InstallDir}plus/search/" name="formsearch">
+             <input type="hidden" name="ModeID" value="1" />
+			<div class="search_kk"><img src="{$InstallDir}images/search_bt.gif" /> 
+			<input name="keyword" type="text" class="search_k" /></div>
+			<div class="search_s"><input name="" type="image" src="{$InstallDir}images/search.gif" /></div>
+			</form>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--主要部分-->
+<div class="main">
+	<!--左边区块-->
+	<div class="act_ml">
+		<!--内容-->
+		<div class="act_content">
+			<!--当前位置-->
+			<div class="weizhi"><span>当前位置： <a href='{$InstallDir}'>首页</a> >  {ACTCMS_位置导航} >  
+			内容页 </span></div>
+			<!--标题-->
+			<div class="content_p">
+				<h1>{$ArticleTitle}</h1>
+				<!--文章信息-->
+				<div class="act_info"><span>时间:</span>{$ArticleDate}<span>来源:</span>{$ArticleCopyFrom}<span>作者:</span>{$ArticleAuthor}<span>点击:</span>{$ArticleHits}次</div>
+				<!--文章导读-->
+				<div class="act_desc">{$ArticleIntro}</div>
+				<!--文章内容-->
+				<div class="act_neirong">
+						<!-- {aspexe: 
+							if "{$PicUrl}"<>"" then 
+							aspexe="<img src=""{$PicUrl}"" /><br />"
+							end if 
+						} 			
+ -->						{$ArticleContent}
+				</div>
+			</div>
+			<!--//content_p-->
+			<!--相关文章-->
+			<div class="xiangguan">
+				<div class="xiangguan_bt">相关文章：</div>
+				<ul>
+					{ACTCMS_相关文章} 
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<!--心情-->
+			<div class="act_xq">
+				<div class="act_xq_bt">你看到此篇文章的感受是：</div>
+				<div class="act_xq_list">
+
+                	<div class="xqtit">
+                            <h3 class="mar-b-10 txt-l">已经有 <font id="vote_total" color="red"><script language="javascript" type="text/javascript" src="{$InstallDir}plus/mood.asp?Action=count&ID={$ID}&ModeID={$ModeID}&MDID=1"></script></font> 人表态：</h3>
+                      </div>
+
+ 
+
+					<ul><script language="javascript" type="text/javascript" src="{$InstallDir}plus/mood.asp?ID={$ID}&ModeID={$ModeID}&MDID=1"></script>
+						 
+					</ul>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--收藏按钮-->
+			<div class="act_sc">
+				<!--顶 踩-->
+				<div class="dingcai">
+					<div class="ding"><a href="###"  onclick="javascript:Digg({$ID},{$ModeID},'{$InstallDir}');">
+					<span  id="dact"><SCRIPT language=javascript src="{$InstallDir}plus/digg/digg.asp?id={$ID}&post=diggshow&ModeID={$ModeID}"></SCRIPT></span><span  id="dnum"><SCRIPT language=javascript src="{$InstallDir}plus/digg/digg.asp?id={$ID}&post=diggshow&ModeID={$ModeID}"></SCRIPT>%</span></a>
+					</div>
+
+
+					<div class="cai"><a href="###"  onclick="javascript:down({$ID},{$ModeID},'{$InstallDir}');"><span  id="downact"><SCRIPT language=javascript src="{$InstallDir}plus/digg/digg.asp?id={$ID}&post=downshow&ModeID={$ModeID}"></SCRIPT></span><span  id="downnum"><SCRIPT language=javascript src='{$InstallDir}plus/digg/digg.asp?id={$ID}&post=downshow&ModeID={$ModeID}'></SCRIPT>%</span></a></div>
+					<div class="clear"></div>
+				</div>
+				<!--收藏按钮-->
+				<div class="act_shoucang">
+			   <!-- fxhlw Button BEGIN -->
+				<div id="ckepop">
+					<a href="http://www.fxhlw.com/share/" class="fxhlw fxhlw_txt fxico fxico_fxhlw" target="_blank">分享到：</a>
+					<a class="fxhlw_button_tools_1"></a>
+					<a class="fxhlw_button_tools_2"></a>
+					<a class="fxhlw_button_tools_3"></a>
+					<a class="fxhlw_button_tools_4"></a>
+				</div>
+				<script type="text/javascript" src="http://s.fxhlw.com/code/fx.js" charset="utf-8"></script>
+				<!-- fxhlw Button END -->
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+		</div>
+		<!--评论板块-->
+		<div class="pinglun">
+			<div class="pinglun_bt"><span><a href="{$InstallDir}plus/Comment/index.asp?ModeID={$ModeID}&ClassID={$ClassID}&ID={$ID}">已有 <font color="#FF0000">{$CommentCount}</font> 人参与</a></span><b>所有评论</b></div>
+			<div class="pinglun_nr">
+				<!--评论内容-->
+ 				{$TypeComment}
+ 			</div>
+			<!--发表评论-->
+			<div class="act_fbpl">
+ 			{$WriteComment}
+ 			</div>
+		</div>
+		
+		
+	</div>
+	<!--右边区块-->
+	<div class="act_mr">
+		<!--热门排行-->
+		<div class="hot">
+			<!--标题-->
+			<div class="hot_bt"><span>热门排行</span></div>
+			<div class="hot_nr">
+				<ul>
+					{ACTCMS_热门排行} 
+				</ul>
+			</div>
+		</div>
+		<!--最新文章-->
+		<div class="new">
+			<!--标题-->
+			<div class="new_bt"><span>最新文章</span></div>
+			<!--内容-->
+			<div class="new_nr">
+				<!--最新文章列表-->
+				{ACTCMS_右侧最新文章}
+			</div>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+</div>
+<!--网页底部-->
+<div class="footer">
+ <!--#include file="foot.html"-->
+</div>
+</body>
+</html>

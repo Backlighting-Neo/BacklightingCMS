@@ -1,0 +1,201 @@
+<head>
+<title>{$SiteName}-网站留言本首页-By www.ActCMS.Com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="ACT内容管理系统、免费开源的ASP网站新闻发布系统、免费网站管理系统、免费CMS系统、网站设计、搜索引擎排名研究、网站经营理念">
+<meta name="description" content="开源CMS,网站管理系统,cms,新闻发布系统,内容管理系统,免费网站管理系统,免费CMS系统,ASP网站开发,网站优化,ASP网站管理系统 ">
+<SCRIPT>function showimage(){document.images.tus.src="face/"+document.form.xq.options[document.form.xq.selectedIndex].value+".gif";}</SCRIPT>
+<link rel="Bookmark" href="{$InstallDir}images/favicon.ico" />
+<link rel="shortcut icon" href="{$InstallDir}images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="{$InstallDir}images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="{$InstallDir}images/Main.css" charset="utf-8" />
+<link href="face/style.css" rel="stylesheet" type="text/css">
+<style>
+.tb {word-break:break-all}
+#notice {
+	BORDER-RIGHT: #f4d738 2px solid;
+	PADDING-RIGHT: 0px;
+	BORDER-TOP: #f4d738 2px solid;
+	PADDING-LEFT: 35px;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 0px;
+	BORDER-LEFT: #f4d738 2px solid;
+	COLOR: #c00;
+	LINE-HEIGHT: 30px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: #f4d738 2px solid;
+	HEIGHT: 30px;
+	background-color: #fffdaa;
+	background-repeat: no-repeat;
+	background-position: 8px 50%;
+	width: 740px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+</style>
+</head>
+<body>
+  
+{$title}
+  <TABLE width=694  height=220  border=1 cellPadding=0 cellSpacing=0 bordercolor="#9FBCE3" style="BORDER-COLLAPSE: collapse">
+<form action="write.asp" method="post" name="form" id="form" onSubmit="return chk(this);" >
+	<TR bgcolor="#E6F1FE" class="bg1"> 
+      <TD height=25 colspan="3" align=center noWrap>&nbsp; </TD>
+    </TR>
+    <TBODY>
+      <TR bgcolor="#FFFFFF" class="bg1"> 
+        <TD width=63 height=25 align=center noWrap> 性 质：</TD>
+        <TD width=229 height=25 align="left" noWrap> &nbsp;&nbsp; 
+          <INPUT title=这是大家都看得见的哟！ type=radio CHECKED 
+      value="0" name=show id="gk"><label for=gk>&nbsp;公开&nbsp;</label>
+          <INPUT title=这个只有站长才看得见哟！ type=radio value=1 
+      name=show id="qqh"><label for=qqh>&nbsp;悄悄话&nbsp;</label>
+        </TD>
+        <TD width="394" rowspan="7" align=right valign="top" noWrap>
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr> 
+              <td align="center"> <textarea name="nr" cols="60" rows="14" class="gbinput" id="nr"  title="这里不能留空的！&#13;&#10;请留下你的贵言" ></textarea> 
+              </td>
+            </tr>
+            <tr> 
+              <td height="20" align="center">
+			  {$Code}<input type="submit" name="submit" value="   提交   " class="button" > 
+                &nbsp;&nbsp; <input type="reset" name="Submit" value="   复原   "  class="button"> 
+              </td>
+            </tr>
+            <tr>
+              <td height="10" align="center">&nbsp;</td>
+            </tr>
+          </table>
+        </TD>
+      </TR>
+      <TR class="bg1"> 
+        <TD width=63 align=center noWrap>姓 名：</TD>
+        <TD width=229 height="25" align="left" noWrap> &nbsp;&nbsp; 
+          <input name=name class="gbinput" id="name" title=我真的好想认识你！ size=20  maxlength=30>
+          (<FONT color=#ff0000>*</FONT>) </TD>
+      </TR>
+      <TR class="bg1"> 
+        <TD width=63 height=26 align=center noWrap >QQ 号：</TD>
+        <TD width=229 height=26 align="left" noWrap> &nbsp;&nbsp; <input title=我真的好想认识你！ maxlength=30 size=20 name=qq class="gbinput"> </TD>
+      </TR>
+      <TR class="bg1"> 
+        <TD width=63 align=center noWrap >Email：</TD>
+        <TD width=229 height=25 align="left" noWrap > &nbsp;&nbsp; <INPUT name=mail class="gbinput" id="mail" title=让我轻轻地告诉你，请留下信箱地址！ 
+      size=20 maxLength=50 >
+        </TD>
+      </TR>
+      <TR class="bg1"> 
+        <TD width=63 height=25 align=center noWrap>主 页：</TD>
+        <TD width=229 height=25 align="left" noWrap> &nbsp;&nbsp; <INPUT name=url  class="gbinput" id="url" style="width:200px" title=这可以免费的广告哟 
+      value=http:// size=22 maxLength=50 > </TD>
+      </TR>
+      <TR class="bg1"> 
+        <TD width=63 height=29 align=center noWrap>&nbsp;心 情：</TD>
+        <TD width=229 height=29 align=left noWrap> &nbsp;&nbsp; <SELECT name=xq 
+      size=1 id="xq" onchange=showimage()>
+            <OPTION value=12 selected>请选择心情</OPTION>
+            <OPTION 
+        value=1>好开心</OPTION>
+            <OPTION value=2>好难过</OPTION>
+            <OPTION 
+        value=3>好伤心</OPTION>
+            <OPTION value=4>要唱歌</OPTION>
+            <OPTION 
+        value=5>正哭泣</OPTION>
+            <OPTION value=6>很满意</OPTION>
+            <OPTION 
+        value=7>很惊喜</OPTION>
+            <OPTION value=8>好生气</OPTION>
+            <OPTION 
+        value=9>好害怕</OPTION>
+            <OPTION value=10>真倒霉</OPTION>
+            <OPTION 
+        value=11>扁着嘴</OPTION>
+            <OPTION value=12>平常心</OPTION>
+            <OPTION 
+        value=13>冒冷汗</OPTION>
+            <OPTION value=14>伤脑筋</OPTION>
+            <OPTION 
+        value=15>笑死了</OPTION>
+            <OPTION value=16>好气愤</OPTION>
+          </SELECT> </TD>
+      </TR>
+      <TR class="bg1"> 
+        <TD width=63 height=38 align=center noWrap>　</TD>
+        <TD width=229 height=38 align=middle noWrap><IMG height=110 
+      alt=能过组合上面的[形象代表]来更换头像 src="face/m12.gif" width=80 
+  name=tus></TD>
+      </TR>
+    </TBODY></form>
+  </TABLE>
+
+
+
+     
+<TABLE style="BORDER-COLLAPSE: collapse" borderColor=#111111 cellSpacing=0 cellPadding=0 width=691 bgColor=#ffffff border=0>
+  <TBODY>
+    <TR> 
+      <TD bgColor=#ebebeb colSpan=2 height=2></TD>
+    </TR>
+    <TR> 
+      <TD height=23 colspan="2" vAlign=bottom noWrap>
+	  &nbsp; 您的位置：<A  href="{$InstallDir}" target=_blank class="t999">{$SiteName}</A>&gt;&gt; 
+        <A  href="{$InstallDir}Plus/book/index.asp"  target=_self class="t999"> </A>{ACTCMS_位置导航}  &gt;&gt;</TD>
+    </TR>
+  <CENTER>
+    <TR> 
+      <TD>&nbsp; </TD>
+    </TR>
+  </center>
+</TABLE>
+
+<!--ActPlus-->
+  <table width='694' border='0' align='center' cellpadding='0' cellspacing='0' bordercolor='#9FBCE3'>
+  <tr> <td width='80' align='center' valign='top'  class='tb'>
+  <img src='face/{$face}.gif' width='80' height='110'><br>{$name}</td>
+  <td height='127'>
+  <table width='100%' height='100%' border='0' cellpadding='0' cellspacing='0'>
+  <tr> 
+  <td width='10'>&nbsp;</td>
+  <td>
+  <table width='100%' height='26%' border='1' align='center' cellpadding='3' cellspacing='0' bordercolor='#9FBCE3' style='border-collapse:collapse'>
+  <tr>
+  <td height='126'> 
+  <table width='100%' height='100%' border='0' cellpadding='0' cellspacing='0' class='tb'>
+  <tr> 
+  <td width='15'>&nbsp;</td>
+  <td width='579' height='20'>第<font color='#993333'>{$i}</font>条留言&nbsp;&nbsp;
+  QQ：{$qq} &nbsp;
+  E-mail：{$mail}&nbsp;{$url} </td> </tr>
+   <tr>  <td>&nbsp;</td> <td valign='top'><br>&nbsp;&nbsp;&nbsp;&nbsp;{$content}<br><br>
+   {$admin}</td>  </tr><tr><td>&nbsp;</td><td height='20'>
+  <div align='right'>ip：{$ip}&nbsp;<font color='#CCCCCC'>{$time}</font></div></td>
+  </tr></table></td> </tr></table></td> </tr></table></td></tr></table> <br>
+<!--ActPlus-->
+{$page}
+  <script language="JavaScript" type="text/JavaScript">
+function chk(a)
+{
+if (a.name.value=="")
+{
+alert ("请输入你的姓名！");
+a.name.focus();
+return false;
+}
+
+if (a.nr.value=="")
+{
+alert ("请输入内容！");
+a.nr.focus();
+return false;
+}
+a.submit.value="提交数据中,请稍等...";
+a.submit.disabled=true;
+a.Submit.disabled=true;
+}
+</script><br> <br>
+Copyright by ActCMS <br> <br>
+</body>
+</html>

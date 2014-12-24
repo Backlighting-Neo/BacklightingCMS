@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$SeoTitle}_{$SiteName}</title>
+<meta name="description" content="{$ClassDescription}" />
+<meta name="keywords" content="{$ClassKeywords}" />
+<link title="{$SeoTitle} —{$SiteName}RSS" type="application/rss+xml" rel="alternate" href="{$Path}plus/rss.asp?classid={$ClassID}" />
+<link href="{$InstallDir}images/actcms.css" rel="stylesheet" type="text/css" />
+<link href="{$InstallDir}images/xinqing.css" rel="stylesheet" type="text/css" />
+<link href="{$InstallDir}images/pinglun.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <!--网页头部-->
+ <!--#include file="header.html"-->
+ 	<!--顶部 第二部分-->
+	<div class="top_2">
+		<!--logo-->
+		<div class="logo"><a href="{$InstallDir}" ><img src="{$InstallDir}images/logo.gif" alt="{$SiteName}" width="220" height="90" /></a></div>
+		<!--banner-->
+		<div class="banner"><a href="http://www.actcms.com" title="合肥网络公司"><img src="{$InstallDir}images/banner.gif" alt="合肥网络公司" width="728" height="90" /></a></div>
+		<div class="clear"></div>
+	</div>
+	<!--导航菜单-->
+	<div class="menu">
+		<div class="menu_l"></div>
+		<ul id="menu">
+			<li><a href="{$InstallDir}">网站首页</a></li>
+			{ACTCMS_网站总导航} 
+		</ul>
+		<div class="menu_r"></div>
+		<div class="clear"></div>
+	</div>
+	<!--二级导航-->
+	<div class="nav">
+		{ACTCMS_通用总导航} 
+	</div>
+	<!--关键字搜索-->
+	<div class="tags">
+		<!--tags-->
+		<div class="tag">
+			<b>Tags:</b>
+			{=GetTags(10,3)}
+		</div>
+		<!--search-->
+		<div class="search">
+		   <form action="{$InstallDir}plus/search/" name="formsearch">
+             <input type="hidden" name="ModeID" value="1" />
+			<div class="search_kk"><img src="{$InstallDir}images/search_bt.gif" /> 
+			<input name="keyword" type="text" class="search_k" /></div>
+			<div class="search_s"><input name="" type="image" src="{$InstallDir}images/search.gif" /></div>
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--主要部分-->
+<div class="main">
+	<!--左边区块-->
+	<div class="act_ml">
+		<!--内容-->
+		<div class="act_content">
+			<!--当前位置-->
+			<div class="weizhi"><span>当前位置： <a href='{$InstallDir}'>首页</a> >  {ACTCMS_位置导航}  (<a href="{$InstallDir}plus/rss.asp?classid={$ClassID}" target="_blank" class="news">RSS订阅</a>)  </span></div>
+			<!--图片列表-->
+				<ul class="list_img list_img_main">
+		{ACTCMS_通用图片分页} 
+				</ul>
+			<!--分页-->
+			<div class="pages">
+  				{$pagelist}
+			</div>
+		</div>
+				
+		
+	</div>
+	<!--右边区块-->
+	<div class="act_mr">
+		<!--热门排行-->
+		<div class="hot">
+			<!--标题-->
+			<div class="hot_bt"><span>热门图文排行</span></div>
+				 <ul class="list_img_txt">
+                {ACTCMS_热门图文排行} 
+          	</ul>
+		</div>
+		<!--最新文章-->
+		<div class="new">
+			<!--标题-->
+			<div class="new_bt"><span>最新图片</span></div>
+			<!--内容-->
+			<div class="new_nr">
+				 <ul class="img_txt img_txt01">
+             {ACTCMS_热门导读} 
+           </ul>
+			</div>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+</div>
+<!--网页底部-->
+<div class="footer">
+ <!--#include file="foot.html"-->
+</div>
+
+</body>
+</html>

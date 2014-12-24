@@ -1,0 +1,58 @@
+
+通用标签
+{$SiteName} 网站名称
+{$SiteTitle}网站标题
+{$Keywords}网站META关键词
+{$Description}网站META网页描述
+{$CopyRight}版权信息
+{$InstallDir}系统安装目录
+{$AdminName} 站长名
+{$Logo}网站logo
+{$AdminMail} 站长mail
+{$AdminDir} 后台目录   
+{$SiteUrl}  网站完整地址
+{$Beian}  网站备案标签
+{$Statcode}  统计标签
+
+
+共 {$pagecount} 篇 页次: {$pagethis}/{$pagenum}页 
+
+
+{=CountClass(栏目ID)} 显示该栏目文章总数,栏目ID支持通用标签,如{=CountClass({$ClassID})}
+{$ClassID} ClassID
+{$ClassName}栏目名称
+{$ClassKeywords}META关键词
+{$ClassDescription}META网页描述
+{$SeoTitle} 栏目SEO标题
+{$ClassPicUrl} 栏目缩略图
+内容标签
+{$ArticleSize}字体大小
+{$ArticleContent}文章内容
+{$ArticleTitle}文章标题
+{$ArticleAuthor}作者
+{$ArticleCopyFrom}来源
+{$IntactTitle}完整标题
+{$ArticleKeyWord}关键字
+{$ArticleHits}点击数
+{$ArticleDate}添加时间
+{$ArticleIntro}导读
+{$IntactTitle}完整标题
+{$ArticleProperty}完整属性 推荐,热门,今日头条,幻灯片
+{$TypeComment}显示留言
+{$WriteComment}留言
+{$PrevArticle}上一页
+{$NextArticle}下一页
+{$PicUrl} 文章缩略图
+{$CTitle} 格式化标题
+{$ArticleUrl} 本页网址
+评论
+{$ArticleUrl} 内容链接
+{$KeyTags} 文章tag
+地图标签
+{$maplist} 
+栏目名称
+
+
+单页标签 
+{$pagename} 单页名称
+{$diycontent} 单页内容

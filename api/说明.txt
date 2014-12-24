@@ -1,0 +1,18 @@
+Public.asp 是公用的函数库,如果有几个以上的独立函数需要调用同一个函数的话.可以将这个函数写在public.asp里
+
+默认演示 demo.inc 是一个独立的函数.然后调用 Public.asp的demotest
+
+可以在模版里放置  {=ACTEXE(demo,1)} 来测试效果
+
+
+
+demoPrivate.inc 是独立函数.也没有调用公用的函数库
+
+可以在模版里放置  {=ACTEXE(demoPrivate,1)} 来测试效果
+
+
+论坛帮助 http://bbs.actcms.com
+
+
+
+

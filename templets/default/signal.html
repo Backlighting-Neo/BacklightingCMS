@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$ClassName}_{$SiteName}</title>
+<meta name="description" content="{$ArticleIntro}" />
+<meta name="keywords" content="{$ArticleKeyWord}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{$InstallDir}images/actcms.css" rel="stylesheet" type="text/css" />
+<link href="{$InstallDir}images/Plus/xinqing.css" rel="stylesheet" type="text/css" />
+<SCRIPT src="{$InstallDir}act_inc/Act.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="{$InstallDir}act_inc/js/lhgajax.js" type="text/javascript"></SCRIPT>
+</head>
+
+<body>
+ <!--网页头部-->
+ <!--#include file="header.html"-->
+ 	<!--顶部 第二部分-->
+	<div class="top_2">
+		<!--logo-->
+		<div class="logo"><a href="{$InstallDir}" ><img src="{$InstallDir}images/logo.gif" alt="{$SiteName}" width="220" height="90" /></a></div>
+		<!--banner-->
+		<div class="banner"><a href="http://www.actcms.com" title="合肥网络公司"><img src="{$InstallDir}images/banner.gif" alt="合肥网络公司" width="728" height="90" /></a></div>
+		<div class="clear"></div>
+	</div>
+	<!--导航菜单-->
+	<div class="menu">
+		<div class="menu_l"></div>
+		<ul id="menu">
+			<li><a href="{$InstallDir}">网站首页</a></li>
+			{ACTCMS_网站总导航} 
+		</ul>
+		<div class="menu_r"></div>
+		<div class="clear"></div>
+	</div>
+	<!--二级导航-->
+	<div class="nav">
+		{ACTCMS_通用导航} 
+	</div>
+	<!--关键字搜索-->
+	<div class="tags">
+		<!--tags-->
+		<div class="tag">
+			<b>Tags:</b>
+ 			{=GetTags(10,3)}
+		</div>
+		<!--search-->
+		<div class="search">
+		      <form action="{$InstallDir}plus/search/" name="formsearch">
+             <input type="hidden" name="ModeID" value="1" />
+			<div class="search_kk"><img src="{$InstallDir}images/search_bt.gif" /> 
+			<input name="keyword" type="text" class="search_k" /></div>
+			<div class="search_s"><input name="" type="image" src="{$InstallDir}images/search.gif" /></div>
+			</form>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--主要部分-->
+<div class="main">
+	<!--左边区块-->
+	<div class="act_ml">
+		<!--内容-->
+		<div class="act_content">
+			<!--当前位置-->
+			<div class="weizhi"><span>当前位置： <a href='{$InstallDir}'>首页</a> >  {ACTCMS_位置导航}</span></div>
+			<!--标题-->
+			<div class="content_p">
+				<h1>{$ClassName}</h1>
+				<!--单页内容-->
+				<div class="act_neirong">{$GetClassIntro}</div>
+			</div>
+			<!--//content_p-->
+			<!--收藏按钮-->
+			<div class="act_sc">
+				<div class="act_shoucang">
+				   <!-- fxhlw Button BEGIN -->
+					<div id="ckepop">
+						<a href="http://www.fxhlw.com/share/" class="fxhlw fxhlw_txt fxico fxico_fxhlw" target="_blank">分享到：</a>
+						<a class="fxhlw_button_tools_1"></a>
+						<a class="fxhlw_button_tools_2"></a>
+						<a class="fxhlw_button_tools_3"></a>
+						<a class="fxhlw_button_tools_4"></a>
+					</div>
+					<script type="text/javascript" src="http://s.fxhlw.com/code/fx.js" charset="utf-8"></script>
+					<!-- fxhlw Button END -->
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<!--右边区块-->
+	<div class="act_mr">
+		<!--热门排行-->
+		<div class="hot">
+			<!--标题-->
+			<div class="hot_bt"><span>热门排行</span></div>
+			<div class="hot_nr">
+				<ul>
+					{ACTCMS_热门排行} 
+				</ul>
+			</div>
+		</div>
+		<!--最新文章-->
+		<div class="new">
+			<!--标题-->
+			<div class="new_bt"><span>最新文章</span></div>
+			<!--内容-->
+			<div class="new_nr">
+				<!--最新文章列表-->
+				{ACTCMS_右侧最新文章}
+			</div>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+</div>
+<!--网页底部-->
+<div class="footer">
+ <!--#include file="foot.html"-->
+</div>
+</body>
+</html>

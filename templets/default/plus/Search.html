@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$SiteName}-{$SiteTitle}</title>
+ <link href="{$InstallDir}images/actcms.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body>
+
+<div class="w960 searchheader">
+	<div class="toplogo">
+        <h1><a href="{$InstallDir}"><img src="{$SiteUrl}images/logo.gif"/></a> </h1>
+	</div>
+ 
+
+	<div class="searchform">
+      <form action="{$InstallDir}plus/search/" name="formsearch">
+	  	<input type="hidden" name="ModeID" value="{$ModeID}" />
+			<span>搜索:</span>
+           <input name="keyword" type="text" class="search-keyword" id="search-keyword" />
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="2" selected='1'>智能模糊搜索</option>
+               <option value="1">仅搜索标题</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>        
+        </form>
+	</div>
+</div>
+
+<div class="w960 searchtit">搜索 <strong class="fc_03c">{$KeyWord}</strong> 的结果</div>
+
+<div class="w960 searchul">
+	<ul>
+		<!--ActPlus-->
+		<li>
+		   <h3><a href="{$ArticleUrl}" target="_blank">{$ArticleTitle}</a></h3>
+		   <p>{$ArticleIntro}</p>
+		   <p class="hf"></p>
+		   <p>
+			  <span>{$ArticleUrl}</span>
+			  <span><em class="c3">{$ArticleDate}</em></span>
+			  <span>-<a href="{$ClassUrl}" class="list" target="_blank">{$ClassName}</a></span>		
+		   </p>
+		</li>
+		<!--ActPlus-->
+	</ul>
+</div>
+
+<div class="w960 pages">{$page}</div> 
+
+ 
+<div class="footer w960">
+	<p class="link">
+        关于我们 - <a href="mailto:{$AdminMail}">电子邮件联系[推荐]</a> - 
+        广告服务 - <a href="{$InstallDir}plus/link/">友情链接</a> - 版权声明
+	</p>
+	 
+	<p class="powered">
+		Powered by <a href="http://www.actcms.com" title="ACTCMS" target="_blank"><strong>ACT<span>CMS</span></strong></a> &copy; 2004-2008  
+	</p> 
+</div>
+
+</body>
+</html>

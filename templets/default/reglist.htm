@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新用户注册</title>
+<meta content="会员中心" name="keywords">
+<meta content="会员中心" name="description">
+ <link href="{$InstallDir}user/images/css.css" rel="stylesheet" type="text/css" />
+  <script language="JavaScript" src="../editor/ckeditor/ckeditor.js"></script>
+ <script type='text/javascript' src='../ACT_INC/js/time/WdatePicker.js'></script>
+<script language="JavaScript" type="text/javascript" src="../ACT_inc/js/lhgcore/lhgcore.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="../ACT_inc/js/lhgcore/lhgdialog.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="../ACT_inc/js/lhgcore/Main.js"></script>
+ <script type="text/javascript" src="../ACT_INC/js/swfobject.js"></script>
+<script type='text/javascript' src='../ACT_INC/main.js'></script>
+</head>
+<body style="background-color:#fff">
+<div id="head">
+  <div id="logo"><a href="user/" alt=""><img src="images/logo_member.gif" alt="actcms"></a></div><div id="banner"></div>
+</div>
+<div id="membermenu">
+<a href="/">首页</a>
+<a href="index.asp">会员中心</a>
+ </div>
+ <div id="main">
+<form id="ActCMSs" name="ActCMSs" method="post" action="?action=save&ModeID={$ModeID}">
+    <table cellpadding="0" cellspacing="1" class="table_reg">
+      <caption>
+      新用户注册
+      </caption>
+        <tr>
+        <th width="12%">用户名：</th>
+        <td width="*"><input type="text" name="UserName" id="UserName" value="" size="40"  /><font color=red>*</font></td>
+      </tr>
+      <tr>
+        <th>密　码：</th>
+        <td><input name="PassWord" type="password" id="PassWord" size="40" /><font color=red>*</font></td>
+      </tr>
+ 
+      <tr>
+        <th>确认密码：</th>
+        <td><input name="RPassWord" type="password" id="RPassWord" size="40"/></td>
+      </tr>
+            <tr>
+        <th>Email地址：</th>
+        <td><input name="Email" type="text" id="Email" size="40" /><font color=red>*</font>
+        </td>
+      </tr>
+
+
+    <tr>
+      <th align="right">提示问题：</th>
+      <td><select id="Question"  name="Question">
+        <option value="" selected="selected">--请您选择--</option>
+        <option 
+        value="我的宠物名字？">我的宠物名字？</option>
+        <option 
+        value="我最好的朋友是谁？">我最好的朋友是谁？</option>
+        <option 
+        value="我最喜爱的颜色？">我最喜爱的颜色？</option>
+        <option 
+        value="我最喜爱的电影？">我最喜爱的电影？</option>
+        <option 
+        value="我最喜爱的影星？">我最喜爱的影星？</option>
+        <option 
+        value="我最喜爱的歌曲？">我最喜爱的歌曲？</option>
+        <option 
+        value="我最喜爱的食物？">我最喜爱的食物？</option>
+        <option value="我最大的爱好？">我最大的爱好？</option>
+        <option value="我中学校名全称是什么？">我中学校名全称是什么？</option>
+        <option 
+        value="我的座右铭是？">我的座右铭是？</option>
+        <option 
+        value="我最喜欢的小说的名字？">我最喜欢的小说的名字？</option>
+        <option 
+        value="我最喜欢的卡通人物名字？">我最喜欢的卡通人物名字？</option>
+        <option 
+        value="我母亲/父亲的生日？">我母亲/父亲的生日？</option>
+        <option 
+        value="我最欣赏的一位名人的名字？">我最欣赏的一位名人的名字？</option>
+        <option 
+        value="我最喜欢的运动队全称？">我最喜欢的运动队全称？</option>
+        <option 
+        value="我最喜欢的一句影视台词？">我最喜欢的一句影视台词？</option>
+      </select><font color="red">*</font></td>
+    </tr>
+    <tr >
+      <th>提示答案：</th>
+      <td><input  name="Answer" id="Answer"  style="WIDTH: 180px" /><font color="red">*</font></td>
+    </tr>
+
+
+
+
+		{$RegMode}
+	{$regcode}
+
+ 
+      <tr>
+      <th></th>
+        <td>
+<input type="button" class="button_style" name="Submit"   onclick="CheckForm()" value="  注  册  " />
+<input type="reset" class="button_style" name="reset" value="  重  置  " />		
+</td>
+      </tr>
+    </table>
+  </form> 
+  <span id="toggle_pannel"></span>
+  </div>
+<div id="foot">
+    <a href="">网站首页</a>   
+</div>
+ 
+<SCRIPT language=javascript>
+function CheckForm()
+{ 
+var form=document.ActCMSs;
+   if (form.UserName.value=='')
+    { alert("请输入用户名!");   
+	  form.UserName.focus();    
+	   return false;
+    }
+    if (form.PassWord.value=='')  
+	  { alert("请输入初始密码!");   
+	    form.PassWord.focus();   
+		  return false;   
+		 }
+	if (form.RPassWord.value=='')  
+	  {    alert("请输入确定密码!");   
+	    form.RPassWord.focus();    
+		 return false;    
+		 }  
+		  
+	 if (form.PassWord.value!=form.RPassWord.value)   
+	   {    
+	   alert("两次输入的密码不一致!");   
+		  form.PassWord.focus();   
+		  return false;    
+		  }
+	
+ 
+{$regjscode}
+    if(isEmail(form.Email.value)==false)
+      { alert('电子邮箱不正确!');
+        form.Email.focus();
+        return false;
+     }  
+		form.Submit.value="正在提交数据,请稍等...";
+		form.Submit.disabled=true;	
+	    form.submit();
+        return true;
+ 
+
+function isEmail(strEmail) {
+if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
+return true;
+else
+return false;
+}}
+
+</SCRIPT>
+
+</body>
+</html> 
